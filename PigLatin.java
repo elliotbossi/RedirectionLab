@@ -5,12 +5,12 @@ public class PigLatin{
 
   public static String pigLatinSimple(String s){
     String temp = s.toLowerCase();
-    String initial = temp.charAt(0);
-    if ((((inital == "a")||(inital == "e")) || ((inital == "i")||(inital == "o"))) || (initial == "u")){
+    char initial = temp.charAt(0);
+    if ((((initial == 'a')||(initial == 'e')) || ((initial == 'i')||(initial == 'o'))) || (initial == 'u')){
       return (temp + "hay");
     }
     else{
-      return (temp.substring(1) + first + "ay");
+      return (temp.substring(1) + initial + "ay");
     }
   }
 
@@ -18,8 +18,8 @@ public class PigLatin{
     String[] d = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc",
     "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     String temp = s.toLowerCase();
-    String initial = temp.charAt(0);
-    if ((((inital == "a")||(inital == "e")) || ((inital == "i")||(inital == "o"))) || (initial == "u")){
+    char initial = temp.charAt(0);
+    if ((((initial == 'a')||(initial == 'e')) || ((initial == 'i')||(initial == 'o'))) || (initial == 'u')){
       return (temp + "hay");
     }
     else if ((temp.length() > 1) && (Arrays.asList(d).contains(temp.substring(0,2)))) {
@@ -32,8 +32,8 @@ public class PigLatin{
 
   public static String pigLatinBest(String s){
     String temp = s.toLowerCase();
-    String initial = temp.charAt(0);
-    String finale = temp.charAt(temp.length() - 1);
+    char initial = temp.charAt(0);
+    char finale = temp.charAt(temp.length() - 1);
     if (!(Character.isLetter(initial))) {
       return temp;
     }
