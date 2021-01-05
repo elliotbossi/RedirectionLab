@@ -33,12 +33,12 @@ public class PigLatin{
   public static String pigLatinBest(String s){
     String temp = s.toLowerCase();
     String initial = temp.charAt(0);
-    String final = temp.charAt(temp.length() - 1);
-    if !(Character.isLetter(initial)){
+    String finale = temp.charAt(temp.length() - 1);
+    if (!(Character.isLetter(initial))) {
       return temp;
     }
-    else if !(Character.isLetter(final)){
-      return (pigLatin(temp.substring(0, temp.length() - 1)) + final);
+    else if (!(Character.isLetter(finale))) {
+      return (pigLatin(temp.substring(0, temp.length() - 1)) + finale);
     }
     else{
       return pigLatin(temp);
