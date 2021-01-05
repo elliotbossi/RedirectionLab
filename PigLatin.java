@@ -26,6 +26,23 @@ public class PigLatin{
       return (temp.substring(2) + temp.substring(0, 2) + "ay");
     }
     else{
-      return (temp.substring(1) + temp.substring(0, 1) + "ay");      
+      return (temp.substring(1) + temp.substring(0, 1) + "ay");
     }
+  }
+
+  public static String pigLatinBest(String s){
+    String temp = s.toLowerCase();
+    String initial = temp.charAt(0);
+    String final = temp.charAt(temp.length() - 1);
+    if !(Character.isLetter(initial)){
+      return temp;
+    }
+    else if !(Character.isLetter(final)){
+      return (pigLatin(temp.substring(0, temp.length() - 1)) + final);
+    }
+    else{
+      return pigLatin(temp);
+    }
+  }
+
 }
